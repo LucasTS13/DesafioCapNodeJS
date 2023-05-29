@@ -14,5 +14,4 @@ const knex = {
         }
     }
 }
-
 module.exports = knex
