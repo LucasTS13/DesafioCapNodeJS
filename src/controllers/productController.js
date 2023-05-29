@@ -69,21 +69,5 @@ module.exports = {
             return res.json(error)
             
         }
-    },
-
-    async findOne(req, res) {
-        const { id } = req.params
-
-        try {
-            const user = await knex("users").select("id", "name", "email").where({id}).first()
-            if(!user) {
-                return res.json({"message": "Usuário não existe"})
-            }
-
-            return res.json(user)
-        } catch (error) {
-            return res.json(error)
-            
-        }
     }
 }
